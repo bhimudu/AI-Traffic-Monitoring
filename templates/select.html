@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Monitoring System</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .card {
+            background: #ffffff;
+            color: #333;
+            width: 420px;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .card h1 {
+            margin-bottom: 10px;
+            font-size: 26px;
+            color: #203a43;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            margin-bottom: 25px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 15px auto;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .video-btn {
+            background: #2c5364;
+            color: white;
+        }
+
+        .video-btn:hover {
+            background: #203a43;
+        }
+
+        .live-btn {
+            background: #e63946;
+            color: white;
+        }
+
+        .live-btn:hover {
+            background: #c5303b;
+        }
+
+        .divider {
+            margin: 25px 0;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🚦 Traffic Monitoring System</h1>
+    <p>Select the input source to begin analysis</p>
+
+    <!-- Upload Video -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="option">
+            <input type="file" name="video" accept="video/mp4" required>
+            <button type="submit" class="video-btn">📁 Upload Traffic Video</button>
+        </div>
+    </form>
+
+    <div class="divider">OR</div>
+
+    <!-- Live Camera -->
+    <a href="/live" style="text-decoration:none;">
+        <button class="live-btn">📷 Live Camera </button>
+    </a>
+
+    <footer>
+        AI-Based Smart Traffic Surveillance
+    </footer>
+</div>
+
+</body>
+</html>
